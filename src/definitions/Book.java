@@ -33,6 +33,22 @@ public class Book {
         this.bookAuthor = bookAuthor;
     }
 
+    public String getBookName() {
+        return bookName;
+    }
+
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
+    }
+
+    public String getBookIsbnNumber() {
+        return bookIsbnNumber;
+    }
+
+    public void setBookIsbnNumber(String bookIsbnNumber) {
+        this.bookIsbnNumber = bookIsbnNumber;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -40,6 +56,11 @@ public class Book {
                 ", bookAuthor='" + bookAuthor + '\'' +
                 ", bookIsbnNumber='" + bookIsbnNumber + '\'' +
                 '}';
+    }
+
+    public String toString(String bookName, String bookAuthor, String bookIsbnNumber) {
+        return String.format("Book Name:%s, Book Author: %s ,BookISBNnumber:%s",
+                getBookName(), getBookAuthor(), getBookIsbnNumber());
     }
 
     @Override
