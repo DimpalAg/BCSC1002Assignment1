@@ -13,6 +13,7 @@ public class Book {
     private String bookAuthor;
     private String bookIsbnNumber;
 
+    //constructors  ->  default constructors,parametrized constructors
     public Book() {
         bookName = "Java Programming";
         bookAuthor = "Mr.Divyansh Bhardwaj";
@@ -25,6 +26,7 @@ public class Book {
         this.bookIsbnNumber = bookIsbnNumber;
     }
 
+    //getter and setter methods
     public String getBookAuthor() {
         return bookAuthor;
     }
@@ -49,6 +51,7 @@ public class Book {
         this.bookIsbnNumber = bookIsbnNumber;
     }
 
+    //toString methods
     @Override
     public String toString() {
         return "Book{" +
@@ -63,6 +66,7 @@ public class Book {
                 getBookName(), getBookAuthor(), getBookIsbnNumber());
     }
 
+    //equals methods
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
