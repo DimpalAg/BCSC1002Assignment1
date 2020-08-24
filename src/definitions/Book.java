@@ -19,6 +19,12 @@ public class Book {
         bookIsbnNumber = String.valueOf(2342567892567L);
     }
 
+    public Book(String bookName, String bookAuthor, String bookIsbnNumber) {
+        this.bookName = bookName;
+        this.bookAuthor = bookAuthor;
+        this.bookIsbnNumber = bookIsbnNumber;
+    }
+
     public String getBookAuthor() {
         return bookAuthor;
     }
