@@ -42,4 +42,11 @@ public class Library {
     public int hashCode() {
         return Arrays.hashCode(store);
     }
+
+    @Override
+    public String toString() {
+        return "Library{" +
+                "store=" + Arrays.toString(store) +
+                '}';
+    }
 }
