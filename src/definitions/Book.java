@@ -17,7 +17,7 @@ public class Book {
     public Book() {
         bookName = "Java Programming";
         bookAuthor = "Mr.Divyansh Bhardwaj";
-        bookIsbnNumber = String.valueOf(2342567892567L);
+        bookIsbnNumber = String.valueOf(23 - 425 - 6789 - 2567L);
     }
 
     public Book(String bookName, String bookAuthor, String bookIsbnNumber) {
@@ -26,16 +26,25 @@ public class Book {
         this.bookIsbnNumber = bookIsbnNumber;
     }
 
+    public Book(String bookName) {
+        this.bookName = bookName;
+        this.bookAuthor = " Mr.Sagar";
+        this.bookIsbnNumber = String.valueOf(24 - 356 - 7891 - 1273L);
+    }
+
     //getter and setter methods
     public String getBookAuthor() {
+
         return bookAuthor;
     }
 
     public void setBookAuthor(String bookAuthor) {
+
         this.bookAuthor = bookAuthor;
     }
 
     public String getBookName() {
+
         return bookName;
     }
 
@@ -44,10 +53,12 @@ public class Book {
     }
 
     public String getBookIsbnNumber() {
+
         return bookIsbnNumber;
     }
 
     public void setBookIsbnNumber(String bookIsbnNumber) {
+
         this.bookIsbnNumber = bookIsbnNumber;
     }
 
