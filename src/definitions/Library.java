@@ -7,7 +7,12 @@
 package definitions;
 
 public class Library {
-    private Book[] StoreAllBookscurrentlyAvailable;
+    private Book[] store;
+
+
+    public Library(Book[] store) {
+        this.store = store;
+    }
 
 
 }
