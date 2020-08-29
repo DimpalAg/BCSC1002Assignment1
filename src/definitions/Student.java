@@ -102,14 +102,30 @@ public class Student {
                 '}';
     }
 
+    /**
+     * This method adds a book to a library.
+     *
+     * @param name The name of the book to be added.
+     */
+
     public void issueBook(String name) {
         System.out.println(name + "book was issued for you");
     }
+
+    /**
+     * This method returns the book back to the library .
+     *
+     * @param name The name of the book you want to return
+     */
 
     public void returnBook(String name) {
 
         System.out.println("thank You for returning" + name + ".Hope you read it");
     }
+
+    /**
+     * This method shows a list of books in our inventory
+     */
 
     public void listInventory() {
         for (Book book : namesOfBooksIssued) {
