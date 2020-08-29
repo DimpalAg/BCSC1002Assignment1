@@ -10,22 +10,35 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Student {
+
     private String studentName;
     private long universityRollNo;
     private int numberOfBooksIssued;
     private Book[] namesOfBooksIssued;
 
-    public Student() {
-        studentName = "Sohan";
-        universityRollNo = 191500245L;
-        numberOfBooksIssued = 3;
-        namesOfBooksIssued = new Book[]{};
-    }
 
     public Student(String studentName, long universityRollNo, int numberOfBooksIssued, Book[] namesOfBooksIssued) {
         this.studentName = studentName;
         this.universityRollNo = universityRollNo;
         this.numberOfBooksIssued = numberOfBooksIssued;
+        this.namesOfBooksIssued = namesOfBooksIssued;
+    }
+
+    public Student(String studentName) {
+        this.studentName = studentName;
+        universityRollNo = 191500375L;
+        numberOfBooksIssued = 5;
+        namesOfBooksIssued = new Book[]{};
+    }
+
+    public Student() {
+        this.namesOfBooksIssued = new Book[10];
+        for (int i = 0; i < namesOfBooksIssued.length; i++) {
+            namesOfBooksIssued[i] = new Book("Book" + (i + 1));
+        }
+    }
+
+    public Student(Book[] namesOfBooksIssued) {
         this.namesOfBooksIssued = namesOfBooksIssued;
     }
 
@@ -88,4 +101,21 @@ public class Student {
                 ", namesOfBooksIssued=" + Arrays.toString(namesOfBooksIssued) +
                 '}';
     }
+
+    public void issueBook(String name) {
+        System.out.println(name + "book was issued for you");
+    }
+
+    public void returnBook(String name) {
+
+        System.out.println("thank You for returning" + name + ".Hope you read it");
+    }
+
+    public void listInventory() {
+        for (Book book : namesOfBooksIssued) {
+            System.out.println(book);
+        }
+    }
+
+
 }
