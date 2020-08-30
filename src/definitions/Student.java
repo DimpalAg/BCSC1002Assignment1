@@ -1,5 +1,5 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
+ *  User: Dimpal Agrawal
  *  Date: 21/08/20
  *  Time: 3:49 PM
  *  File Name : Student.java
@@ -12,21 +12,20 @@ import java.util.Objects;
 public class Student {
 
     private String studentName;
-    private long universityRollNo;
+    private long universityRollNumber;
     private int numberOfBooksIssued;
     private Book[] namesOfBooksIssued;
 
-
     public Student(String studentName, long universityRollNo, int numberOfBooksIssued, Book[] namesOfBooksIssued) {
         this.studentName = studentName;
-        this.universityRollNo = universityRollNo;
+        this.universityRollNumber = universityRollNo;
         this.numberOfBooksIssued = numberOfBooksIssued;
         this.namesOfBooksIssued = namesOfBooksIssued;
     }
 
     public Student(String studentName) {
         this.studentName = studentName;
-        universityRollNo = 191500375L;
+        universityRollNumber = 191500375L;
         numberOfBooksIssued = 5;
         namesOfBooksIssued = new Book[]{};
     }
@@ -51,11 +50,11 @@ public class Student {
     }
 
     public long getUniversityRollNo() {
-        return universityRollNo;
+        return universityRollNumber;
     }
 
     public void setUniversityRollNo(long universityRollNo) {
-        this.universityRollNo = universityRollNo;
+        this.universityRollNumber = universityRollNo;
     }
 
     public int getNumberOfBooksIssued() {
@@ -79,7 +78,7 @@ public class Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return universityRollNo == student.universityRollNo &&
+        return universityRollNumber == student.universityRollNumber &&
                 numberOfBooksIssued == student.numberOfBooksIssued &&
                 Objects.equals(studentName, student.studentName) &&
                 Arrays.equals(namesOfBooksIssued, student.namesOfBooksIssued);
@@ -87,7 +86,7 @@ public class Student {
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(studentName, universityRollNo, numberOfBooksIssued);
+        int result = Objects.hash(studentName, universityRollNumber, numberOfBooksIssued);
         result = 31 * result + Arrays.hashCode(namesOfBooksIssued);
         return result;
     }
@@ -96,35 +95,34 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "studentName='" + studentName + '\'' +
-                ", universityRollNo=" + universityRollNo +
+                ", universityRollNo=" + universityRollNumber +
                 ", numberOfBooksIssued=" + numberOfBooksIssued +
                 ", namesOfBooksIssued=" + Arrays.toString(namesOfBooksIssued) +
                 '}';
     }
 
     /**
-     * This method adds a book to a library.
+     * This method allows a student to issue a book.
      *
-     * @param name The name of the book to be added.
+     * @param name The name of the book that student issue.
      */
 
-    public void issueBook(String name) {
+    public void doIssueBook(String name) {
         System.out.println(name + "book was issued for you");
     }
 
     /**
-     * This method returns the book back to the library .
+     * This method allows a student to return a book .
      *
-     * @param name The name of the book you want to return
+     * @param name The name of the book that student want to return
      */
 
-    public void returnBook(String name) {
-
+    public void doReturnBook(String name) {
         System.out.println("thank You for returning" + name + ".Hope you read it");
     }
 
     /**
-     * This method shows a list of books in our inventory
+     * This method shows a list of books issued by a student
      */
 
     public void listInventory() {
@@ -132,6 +130,4 @@ public class Student {
             System.out.println(book);
         }
     }
-
-
 }

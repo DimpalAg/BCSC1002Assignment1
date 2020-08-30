@@ -1,5 +1,5 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divanyansh Bhardwaj(dbc2201)
+ *  User: Dimpal Agrawal
  *  Date: 21/08/20
  *  Time: 3:49 PM
  *  File Name : Book.java
@@ -17,7 +17,7 @@ public class Book {
     public Book() {
         bookName = "Java Programming";
         bookAuthor = "Mr.Divyansh Bhardwaj";
-        bookIsbnNumber = String.valueOf(23 - 425 - 6789 - 2567L);
+        bookIsbnNumber = "2783748423423";
     }
 
     public Book(String bookName, String bookAuthor, String bookIsbnNumber) {
@@ -29,37 +29,31 @@ public class Book {
     public Book(String bookName) {
         this.bookName = bookName;
         this.bookAuthor = " Mr.Sagar";
-        this.bookIsbnNumber = String.valueOf(24 - 356 - 7891 - 1273L);
+        this.bookIsbnNumber = "3572828828254";
     }
 
     //getter and setter methods
     public String getBookAuthor() {
-
         return bookAuthor;
     }
 
     public void setBookAuthor(String bookAuthor) {
-
         this.bookAuthor = bookAuthor;
     }
 
     public String getBookName() {
-
         return bookName;
     }
 
     public void setBookName(String bookName) {
-
         this.bookName = bookName;
     }
 
     public String getBookIsbnNumber() {
-
         return bookIsbnNumber;
     }
 
     public void setBookIsbnNumber(String bookIsbnNumber) {
-
         this.bookIsbnNumber = bookIsbnNumber;
     }
 

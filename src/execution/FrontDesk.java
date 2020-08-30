@@ -1,5 +1,5 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
+ *  User: Dimpal Agrawal
  *  Date: 21/08/20
  *  Time: 3:50 PM
  *  File Name : FrontDesk.java
@@ -20,6 +20,8 @@ public class FrontDesk {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int clientInput;
+        String studentName;
+        long universityRollNumber;
         Student student = new Student();
         do {
             System.out.println("_=_=__=_=_Welcome To the Front Desk_=_=__=_=_");
@@ -28,19 +30,30 @@ public class FrontDesk {
             System.out.println("2. Return the previously issues books");
             System.out.println("3. Show all previously issue books");
             System.out.println("4. Exit");
+
             clientInput = scanner.nextInt();
             switch (clientInput) {
                 case ISSUE_BOOK:
+                    System.out.println("enter your name");
+                    scanner.nextLine();
+                    studentName = scanner.next();
+                    System.out.println("enter your university Rollno");
+                    universityRollNumber = scanner.nextLong();
                     System.out.println("Enter the name of the book that you want to issue");
                     scanner.nextLine();
                     String bookName = scanner.nextLine();
-                    student.issueBook(bookName);
+                    student.doIssueBook(bookName);
                     break;
                 case RETURN_BOOK:
+                    System.out.println("enter your name");
+                    studentName = scanner.next();
+                    scanner.nextLine();
+                    System.out.println("enter your university Rollno");
+                    universityRollNumber = scanner.nextLong();
                     System.out.println("Enter the name of the book that you want to return");
                     scanner.nextLine();
                     bookName = scanner.nextLine();
-                    student.returnBook(bookName);
+                    student.doReturnBook(bookName);
                     break;
                 case LIST_INVENTORY:
                     student.listInventory();
